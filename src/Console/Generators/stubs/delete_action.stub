@@ -1,0 +1,11 @@
+<?php
+
+namespace DummyNamespace;
+
+use Jestillore\Common\Actions\DeleteAction;
+use NamespacedActionQuery;
+
+class DummyClass extends DeleteAction
+{
+    use DummyActionQuery;
+}

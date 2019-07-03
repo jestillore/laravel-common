@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Jestillore\Common\Models\BaseModel;
+
+class DummyClass extends BaseModel
+{
+    protected $fillable = [];
+}

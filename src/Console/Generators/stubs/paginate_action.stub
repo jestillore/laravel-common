@@ -1,0 +1,11 @@
+<?php
+
+namespace DummyNamespace;
+
+use Jestillore\Common\Actions\PaginateAction;
+use NamespacedActionQuery;
+
+class DummyClass extends PaginateAction
+{
+    use DummyActionQuery;
+}

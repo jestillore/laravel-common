@@ -1,0 +1,16 @@
+<?php
+
+namespace DummyNamespace;
+
+use NamespacedDummyModel;
+
+trait DummyClass
+{
+    /**
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    protected function getQuery()
+    {
+        return DummyModel::query();
+    }
+}

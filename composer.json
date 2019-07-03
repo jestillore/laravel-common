@@ -1,0 +1,28 @@
+{
+    "name": "jestillore/common",
+    "description": "Common code for my Laravel projects.",
+    "require": {
+        "illuminate/database": "^5.8",
+        "illuminate/console": "^5.8",
+        "spatie/laravel-query-builder": "^1.17"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jillberth Estillore",
+            "email": "ejillberth@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jestillore\\Common\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jestillore\\Common\\CommonServiceProvider"
+            ]
+        }
+    }
+}

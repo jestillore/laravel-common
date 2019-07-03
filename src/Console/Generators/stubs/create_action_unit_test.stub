@@ -1,0 +1,32 @@
+<?php
+
+namespace DummyNamespace;
+
+use NamespacedDummyAction;
+use NamespacedDummyModel;
+
+class DummyActionUnitTest extends DummyModelTestCase
+{
+    /**
+     * @var DummyActionAction;
+     */
+    private $action;
+
+    /**
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->action = $this->app->make(DummyActionAction::class);
+    }
+
+    /** @test */
+    public function it_should_create_dummySnakeModel()
+    {
+        $data = $this->getDummyModelData();
+        $dummySingularModel = $this->action->execute($data);
+        $this->assertInstanceOf(DummyModel::class, $dummySingularModel);
+        $this->assertDatabaseHas(self::DUMMY_TABLE_NAME, $data);
+    }
+}

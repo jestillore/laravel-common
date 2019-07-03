@@ -1,0 +1,33 @@
+<?php
+
+namespace DummyNamespace;
+
+use NamespacedDummyModel;
+use Tests\TestCase;
+
+abstract class DummyModelTestCase extends TestCase
+{
+    const DUMMY_TABLE_NAME = 'dummyTableName';
+
+    /**
+     * Get dummyItemDoc data
+     *
+     * @param array $data
+     * @return array
+     */
+    protected function getDummyModelData(array $data = []): array
+    {
+        return factory(DummyModel::class)->make($data)->toArray();
+    }
+
+    /**
+     * Create dummyItemDoc
+     *
+     * @param array $data
+     * @return DummyModel
+     */
+    protected function createDummyModel(array $data = []): DummyModel
+    {
+        return factory(DummyModel::class)->create($this->getDummyModelData($data));
+    }
+}

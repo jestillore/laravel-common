@@ -1,0 +1,11 @@
+<?php
+
+namespace DummyNamespace;
+
+use Jestillore\Common\Actions\ListAction;
+use NamespacedActionQuery;
+
+class DummyClass extends ListAction
+{
+    use DummyActionQuery;
+}

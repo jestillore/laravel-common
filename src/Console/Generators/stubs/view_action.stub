@@ -1,0 +1,13 @@
+<?php
+
+namespace DummyNamespace;
+
+use Jestillore\Common\Actions\ViewAction;
+use NamespacedDummyModel;
+use NamespacedActionQuery;
+
+/** @method DummyModel execute($key) */
+class DummyClass extends ViewAction
+{
+    use DummyActionQuery;
+}

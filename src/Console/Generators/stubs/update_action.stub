@@ -1,0 +1,13 @@
+<?php
+
+namespace DummyNamespace;
+
+use Jestillore\Common\Actions\UpdateAction;
+use NamespacedDummyModel;
+use NamespacedActionQuery;
+
+/** @method DummyModel execute(DummyModel $model, array $data = []) */
+class DummyClass extends UpdateAction
+{
+    use DummyActionQuery;
+}
